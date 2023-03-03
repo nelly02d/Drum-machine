@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Poppins&family=Ubuntu&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+#drum-machine {
+  background: url(https://github.com/nelly02d/Personal-Portfolio-Project/blob/master/background.png?raw=true);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#drum-machine #display {
+  display: flex;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(0deg, rgb(2, 0, 36) 8%, rgba(63, 68, 69, 0.6194852941) 39%, rgba(111, 109, 109, 0.5830707283) 48%, rgb(20, 31, 33) 90%);
+  padding: 10px;
+  border: none;
+  border-radius: 1rem;
+  text-align: center;
+}
+#drum-machine #display-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+#drum-machine #display-btn-container h1 {
+  text-shadow: 0px 0px 20px #fff;
+  font-size: 3rem;
+  color: rgb(2, 0, 36);
+  color: linear-gradient(123deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 0%, rgb(0, 212, 255) 82%);
+}
+#drum-machine #display-btn-container #display-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+#drum-machine #display-btn-container #display-btn-wrapper #power {
+  padding: 10px 20px;
+  background: radial-gradient(circle, rgb(193, 29, 214) 28%, rgb(115, 4, 173) 75%);
+  color: #fff;
+  border: none;
+}
+#drum-machine #display-btn-container #display-btn-wrapper #beat-name {
+  color: #fff;
+  text-shadow: 0px 0px 20px #fff;
+  font-size: 1.5rem;
+  margin: 60px 0;
+}
+#drum-machine #display-btn-container #display-btn-wrapper #vol-title {
+  padding: 5px 20px;
+  color: #fff;
+  border: none;
+}
+
+#pad-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+#pad-container .drum-pad {
+  padding: 50px 60px;
+  border: none;
+  border-radius: 1rem;
+  background: rgb(193, 29, 214);
+  background: radial-gradient(circle, rgb(193, 29, 214) 28%, rgb(115, 4, 173) 75%);
+  margin: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+#pad-container .animate {
+  box-shadow: inset 0px 0px 20px 20px #fff;
+}
+
+@media (max-width: 790px) {
+  #display {
+    flex-direction: column;
+  }
+  #display-btn-wrapper {
+    flex-direction: row;
+  }
+  #beat-name {
+    margin: 0 60px;
+  }
+}/*# sourceMappingURL=main.css.map */

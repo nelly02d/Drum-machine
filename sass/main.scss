@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Poppins&family=Ubuntu&display=swap");
+@import 'config';
+@import 'button';
+
+#drum-machine {
+  background: url(https://github.com/nelly02d/Personal-Portfolio-Project/blob/master/background.png?raw=true);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #display {
+    display: flex;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 1) 8%,
+      rgba(63, 68, 69, 0.6194852941176471) 39%,
+      rgba(111, 109, 109, 0.5830707282913166) 48%,
+      rgba(20, 31, 33, 1) 90%
+    );
+
+    padding: 10px;
+    border: none;
+    border-radius: 1rem;
+    text-align: center;
+
+    &-btn-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1rem;
+
+      h1 {
+        text-shadow: 0px 0px 20px #fff;
+        font-size: 3rem;
+        color: rgb(2, 0, 36);
+        color: linear-gradient(
+          123deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 0%,
+          rgba(0, 212, 255, 1) 82%
+        );
+      }
+
+      #display-btn-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        #power {
+          padding: 10px 20px;
+          background: radial-gradient(
+            circle,
+            rgba(193, 29, 214, 1) 28%,
+            rgba(115, 4, 173, 1) 75%
+          );
+          color: #fff;
+          border: none;
+        }
+
+        #beat-name {
+          color: #fff;
+          text-shadow: 0px 0px 20px #fff;
+          font-size: 1.5rem;
+          margin: 60px 0;
+        }
+
+        #vol-title {
+          padding: 5px 20px;
+          color: #fff;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+#pad-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+
+  .drum-pad {
+    padding: 50px 60px;
+    border: none;
+    border-radius: 1rem;
+    background: rgb(193, 29, 214);
+    background: radial-gradient(
+      circle,
+      rgba(193, 29, 214, 1) 28%,
+      rgba(115, 4, 173, 1) 75%
+    );
+    margin: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    @include transition-ease;
+  }
+
+  .animate {
+    box-shadow: inset 0px 0px 20px 20px #fff;
+  }
+}
+
+
+@media (max-width: 790px) {
+  #display {
+    flex-direction: column;
+  }
+
+  #display-btn-wrapper {
+    flex-direction: row;
+  }
+
+  #beat-name {
+    margin: 0 60px;
+  }
+}
