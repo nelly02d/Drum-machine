@@ -46,3 +46,7 @@ const drumSound = {
   }
 }
 
+const soundName = document.querySelector('#beat-name');
+const drumPad = document.querySelectorAll('.drum-pad');
+const volume = document.querySelector('#volume-control');
+
